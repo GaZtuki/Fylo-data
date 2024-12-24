@@ -1,0 +1,262 @@
+:root{
+  --left: hsl(6, 100%, 80%);
+  --right: hsl(335, 100%, 65%);
+
+  --pale-blue: hsl(243, 100%, 93%);
+  --grayish-blue: hsl(229, 7%, 55%);
+  --dark-blue: hsl(228, 56%, 26%);
+  --very-dark-blue: hsl(229, 57%, 11%);
+
+  --size: 14px;
+  --font-primary: "Raleway", serif;
+
+  --regular: 400;
+  --bold: 700;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100dvw;
+  height: 100dvh;
+  font-family: var(--font-primary);
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+.container {
+  min-width: 320px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.bg-image {
+  background-image: url('./images/bg-mobile.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card .top {
+  width: 100%;
+  padding: 3rem;
+  background-color: var(--dark-blue);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.card .top-img {
+  width: 8.5rem;
+}
+
+.card .top-icons {
+  display: flex;
+  gap: 14px;
+  margin-top: 25px;
+}
+
+.card .bg-icon {
+  /*width: 45px;*/
+  /*height: 45px;*/
+  padding: 12px;
+  border-radius: 8px;
+  background-color: var(--very-dark-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*.card .icon {*/
+/*  width: 25px;*/
+/*  height: 24px;*/
+/*  object-fit: contain;*/
+/*}*/
+
+.card .bottom {
+  padding: 2rem;
+  background-color: var(--dark-blue);
+  border-radius: 8px;
+  color: var(--pale-blue);
+  display: flex;
+  flex-direction: column;
+}
+
+.card .bottom .content {
+  position: relative;
+}
+
+.card .storage-left {
+  /*width: 200px;*/
+  background-color: #f3f3f3;
+  border-radius: 8px;
+  position: absolute;
+  bottom: -60%;
+  left: 17%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  padding-left: 1.5rem;
+  padding-right: 1.2rem;
+  justify-self: center;
+}
+
+.card .storage-left p {
+  font-size: 2.4rem;
+  color: var(--very-dark-blue);
+  font-weight: bold;
+}
+
+.card .storage-left .left{
+  font-size: 13px;
+  color: var(--grayish-blue);
+}
+
+.card .bg-gradient {
+  width: 100%;
+  height: 20px;
+  background-color: var(--very-dark-blue);
+  border-radius: 20px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.card .gradient {
+  width: 70%;
+  height: 78%;
+  background: linear-gradient(to right, var(--left), var(--right));
+  border-radius: 20px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.card .ball {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.card .data .data-info {
+  font-size: 15px;
+  text-align: center;
+  margin-bottom: 14px;
+}
+
+.card .foot-info {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 18px;
+}
+
+@media (min-width: 501px) {
+  body {
+    display: flex;
+    justify-content: center;
+    max-width: 1440px;
+  }
+
+  .container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--very-dark-blue);
+  }
+
+  .bg-image {
+    background-image: url('./images/bg-desktop.png');
+    background-size: 100% 51%;
+    background-position: bottom;
+  }
+
+  .card {
+    width: 65%;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .card .top {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .card .bottom {
+    width: 65%;
+    height: 75%;
+    align-self: end;
+  }
+
+  .card .data .data-info {
+    text-align: left;
+  }
+
+  .card .buttom .content {
+    position: relative;
+  }
+
+  .card .bottom .storage-left {
+    position: absolute;
+    top: -80%;
+    right: 1%;
+    bottom: auto;
+    left: auto;
+    border-bottom-right-radius: 0;
+  }
+
+  .card .bottom .triangle {
+    width: 0;
+    height: 0;
+    /*background-color: #f3f3f3;*/
+    /*border: 14px solid;*/
+    border-right: 12px solid #f3f3f3;
+    border-top: 12px solid #f3f3f3;
+    border-left: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    position: absolute;
+    bottom: -32%;
+    right: 0%;
+  }
+}
